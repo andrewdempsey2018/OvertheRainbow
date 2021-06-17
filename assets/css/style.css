@@ -43,11 +43,11 @@ h1 {
 
 .fa-chevron-down {
     font-size: 4rem;
-    transition: all .5s ease-in-out;
+    transition: all .35s ease-in-out;
 }
 
 .fa-chevron-down:hover {
-    font-size: 6rem;
+    transform: scale(1.5);
     background-image: linear-gradient(90deg,
         var(--red), var(--red),
         var(--orange), var(--orange),
@@ -60,5 +60,3 @@ h1 {
     -webkit-text-fill-color: transparent;
     cursor: pointer;
 }
-
-
