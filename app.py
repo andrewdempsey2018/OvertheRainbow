@@ -9,6 +9,11 @@ def index():
     return render_template('index.html')
 
 
+@app.route("/flags")
+def flags():
+    return render_template("flags.html")
+
+
 if __name__ == "__main__":
     app.run(
         host = os.environ.get('IP', '127.0.0.1'),
