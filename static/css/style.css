@@ -7,7 +7,11 @@
     --green: #007f24;
     --blue: #004dff;
     --purple: #790589;
+    --p1-dark: #2d2d2d;
+    --p1-light: #fefefe;
 }
+
+/* Globals */
 
 * {
     margin: 0;
@@ -16,8 +20,8 @@
 }
 
 body {
-    background-color: #2d2d2d;
-    color: #fefefe;
+    background-color: var(--p1-dark);
+    color: var(--p1-light);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -25,7 +29,9 @@ body {
     justify-content: center;
 }
 
-.container {
+/* Landing Page */
+
+.landing-container {
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -33,12 +39,14 @@ body {
     justify-content: space-around;
 }
 
-h1 {
+.landing-container h1 {
     font-family: 'Noto Sans', sans-serif;
     font-size: 600%;
-    letter-spacing: 2ch;
     user-select: none;
-    padding-left: 2ch;
+}
+
+#chevron-checkbox {
+    display: none;
 }
 
 .fa-chevron-down {
@@ -59,4 +67,27 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+    .landing-container h1 {
+        letter-spacing: 0.6ch;
+        padding-left: 0.6ch;
+    }
+}
+
+@media (min-width: 1024px) {
+    .landing-container h1 {
+        letter-spacing: 1.2ch;
+        padding-left: 1.2ch;
+    }
+}
+
+@media (min-width: 1216px) {
+    .landing-container h1 {
+        letter-spacing: 2ch;
+        padding-left: 2ch;
+    }
 }
