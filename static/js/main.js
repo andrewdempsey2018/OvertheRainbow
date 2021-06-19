@@ -18,11 +18,9 @@ if(checkbox){
 }
 
 // Navigation Bar Toggle
-
 document.addEventListener('DOMContentLoaded', () => {
 
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-  
     if ($navbarBurgers.length > 0) {
   
       $navbarBurgers.forEach( el => {
@@ -37,8 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     }
-  
-  });
+});
   
 // Display flags description when hover on flag flex box
 let flags = document.querySelectorAll('.card-container');
