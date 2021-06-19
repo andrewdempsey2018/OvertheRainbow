@@ -1,19 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<style>
-    
-    img {
-        width: 10%;
-        height: 10%;
-        border-radius: 50%;
-    }
+<h1>Privacy Policy</h1> <!--why the H1 doesn't look like h1 in the preview???-->
 
-    </style>
+<!--below image doesn't load-->
+<img src="https://images.pexels.com/photos/1212407/pexels-photo-1212407.jpeg?cs=srgb&dl=pexels-sharon-mccutcheon-1212407.jpg&fm=jpg" alt="rainbow paint" width="20%" height="20%">
 
-<h1 class="has-text-centered">Privacy Policy</h1>
-
-<small class="has-text-right">Effective 21 June 2021</small>
+<small>Effective 21 June 2021</small>
 
 <h2>Summary</h2>
 
@@ -26,10 +19,9 @@
     <p>
         It is Over the Rainbow policy to respect your privacy regarding any information we may collect while operating our website. This Privacy Policy applies to Over the Rainbow. We respect your privacy and are committed to protecting personally identifiable information you may provide us through the Website. We have adopted this privacy policy to explain what information may be collected on our Website, how we use this information, and under what circumstances we may disclose the information to third parties. This Privacy Policy applies only to information we collect through the Website and does not apply to our collection of information from other sources.
     </p>
-    
-    <img src="https://images.pexels.com/photos/1212407/pexels-photo-1212407.jpeg?cs=srgb&dl=pexels-sharon-mccutcheon-1212407.jpg&fm=jpg" alt="rainbow paint">
-
+       
     <li>General Data Protection Regulation (GDPR)</li>
+      <img src="/static/image/fingerprint.png" alt="colorful fingerprint" width="10%" height="10%"> <!--why it is on top of the page-->
        <p>
            We are a Data Controller of your information.
        </p>
@@ -57,7 +49,7 @@
             <li>The right to data portability.</li>
             <li>The right to withdraw consent.</li>
         </ul>
-
+<br>
     <li>Website Visitors</li>
         <p>
             Like most website operators, Over the Rainbow collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. Over the Rainbow's purpose in collecting non-personally identifying information is to better understand how Over the Rainbow visitors use its website.
@@ -105,12 +97,14 @@
       </p>
 
     <li>Consent</li>
+
+    <img src="/static/image/playdough.jpg" alt="lgbtq playdough" width="10%" height="10%">
+
       <p>
          By using our website, you hereby consent to our Privacy Policy and agree to its terms.
       </p>
 </ol>
 
-<img src=«static/image/logo.png» alt="zebra with rainbow color">
-
+<img src=«static/image/zebralogo.png» alt="zebra with rainbow color"> <!--need to link the image properly-->
 
 {% endblock %}
