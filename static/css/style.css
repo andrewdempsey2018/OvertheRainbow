@@ -118,6 +118,16 @@ body {
     transform: rotateY(180deg);
 }
 
+figure{
+    max-height: 200px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.image{
+display: inherit;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {
