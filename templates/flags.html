@@ -1,4 +1,31 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Flags</h1>
+<h1 class="title is-1 has-text-white"> {{ page_title }}</h1>
+<p class="mb-5 is-size-4 has-text-centered">Click on a flag to reveal its significance.</p>
+<div class="container is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-space-evenly">
+    <!--Content-->
+    {% for flag in flags %}
+    <div class="flex-box-flag ">
+        <div class="card-container">
+            <div class="box card-front">
+                <figure class="image is-5by3-desktop is-2by1-tablet is-5by3-mobile">
+                    <img src="{{flag.Image_url}}" alt="{{flag.flag_name}}">
+                </figure>
+                <h2
+                    class="mt-5 title is-size-4-desktop is-size-5-tablet is-size-6-mobile has-text-black has-text-centered">
+                    {{flag.flag_name}}</h2>
+            </div>
+
+            <div class="box card-back">
+                {{flag.flag_description}}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+<!--end content-->
+</div>
+
+
 {% endblock %}
