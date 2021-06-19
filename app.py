@@ -15,10 +15,15 @@ def test():
 
 
 
+@app.route("/home")
+def home():
+    return render_template('home.html')
+
+
 @app.route("/flags")
 def flags():
     data = []
-    with open("data/flags.json", "r") as json_data:
+    with open("data/flags.json", "r", encoding="utf8") as json_data:
         data = json.load(json_data)
     return render_template("flags.html", page_title="Meet the flags", flags=data)
 

@@ -1,6 +1,21 @@
-let checkbox = document.getElementById("chevron-checkbox");
 
-console.log(checkbox);
+// Landing Page redirect
+let checkbox = document.getElementById("chevron-checkbox");
+let title = document.getElementById("landing-title");
+
+if(checkbox){
+    checkbox.addEventListener("click", () => {
+        // Individual timeout on landing-title element to fade-out
+        setTimeout(() => {
+            title.style.opacity = 0;
+        }, 200)
+
+        // Slower timeout for the window redirect
+        setTimeout(() => {
+            window.location = "/home";
+        }, 400);
+    });
+}
 
 // Navigation Bar Toggle
 
