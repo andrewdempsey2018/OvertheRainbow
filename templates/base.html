@@ -28,7 +28,7 @@
         <!-- Navbar -->
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item" href="#">
+                <a class="navbar-item" href="{{ url_for('index') }}">
                     <img src="{{ url_for('static', filename='images/Logo1-tinypng.png') }}">
                 </a>
           
@@ -41,13 +41,13 @@
           
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-end">
-                    <a href="#" class="navbar-item">
+                    <a href="{{ url_for('home') }}" class="navbar-item">
                         <strong>Home</strong>
                     </a>
-                    <a href="#" class="navbar-item">
+                    <a href="{{ url_for('support') }}" class="navbar-item">
                         <strong>Support</strong>
                     </a>
-                    <a href="#" class="navbar-item">
+                    <a href="{{ url_for('flags') }}" class="navbar-item">
                         <strong>Flags</strong>
                     </a>
                 </div>

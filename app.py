@@ -15,6 +15,11 @@ def test():
     return render_template('test.html')
 
 
+@app.route("/support")
+def support():
+    return render_template('support.html')
+
+
 @app.route("/home")
 def home():
     return render_template('home.html')
