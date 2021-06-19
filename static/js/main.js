@@ -52,4 +52,3 @@ for (let i = 0; i < flags.length; i++) {
         document.getElementsByClassName('card-container')[i].classList.toggle('is-flipped');
     });
 }
-
