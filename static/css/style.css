@@ -22,7 +22,7 @@
 body {
     background-color: var(--p1-dark);
     color: var(--p1-light);
-    height: 100vh;
+    /*height: 100vh;*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,6 +77,65 @@ body {
     -webkit-text-fill-color: transparent;
     cursor: pointer;
 }
+/* flags page */
+
+.container{
+    width: 100%;
+}
+
+.flex-box-flag{
+    width: 90%; 
+    height: 275px;
+    margin-bottom: 25px;
+}
+
+/*Card flitp adapted from: https://3dtransforms.desandro.com/card-flip*/
+
+.card-container{
+    width: 100%;
+    height: 100%;
+    transition: transform 1.2s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card-container:hover, .card-container:active{
+    transform: scale(.97);
+    transition: transform 2s;
+}
+
+.card-container.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-front{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-back{
+    overflow-y: auto;
+    transform: rotateY(180deg);
+}
+
+figure{
+    max-height: 200px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.image{
+display: inherit;
+}
 
 /* Media Queries */
 
@@ -84,6 +143,10 @@ body {
     .landing-container h1 {
         letter-spacing: 0.6ch;
         padding-left: 0.6ch;
+    }
+    .flex-box-flag{
+        width: 45%; 
+        height: 300px;
     }
 }
 
@@ -93,6 +156,9 @@ body {
         padding-left: 1.2ch;
     }
 
+    .flex-box-flag{
+        width: 30%; 
+    }
 }
 
 @media (min-width: 1216px) {
