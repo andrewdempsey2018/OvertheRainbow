@@ -22,14 +22,19 @@
 body {
     background-color: var(--p1-dark);
     color: var(--p1-light);
-    /*height: 100vh;*/
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    min-height: 100vh;
 }
 
 /* Landing Page */
+
+.full-height {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .landing-container {
     height: 50vh;
@@ -39,7 +44,7 @@ body {
     justify-content: space-around;
 }
 
-.landing-container h1 {
+#landing-title {
     font-family: 'Noto Sans', sans-serif;
     font-size: 600%;
     user-select: none;
@@ -49,12 +54,12 @@ body {
     display: none;
 }
 
-.fa-chevron-down {
+.fa-heart {
     font-size: 4rem;
     transition: all .35s ease-in-out;
 }
 
-.fa-chevron-down:hover {
+.fa-heart:hover {
     transform: scale(1.5);
     background-image: linear-gradient(90deg,
         var(--red), var(--red),
@@ -67,8 +72,15 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
+    transition: all .6s cubic-bezier(0.86, 0, 0.07, 1);
 }
-/* flags page */
+
+#chevron-checkbox:checked ~ .chevron-checkbox-label>.fa-heart {
+    transform: scale(1000);
+    opacity: 0;
+}
+
+/* Flags page */
 
 .container{
     width: 100%;
@@ -125,7 +137,7 @@ figure{
 }
 
 .image{
-display: inherit;
+    display: inherit;
 }
 
 /* Media Queries */
@@ -135,6 +147,7 @@ display: inherit;
         letter-spacing: 0.6ch;
         padding-left: 0.6ch;
     }
+
     .flex-box-flag{
         width: 45%; 
         height: 300px;
@@ -146,6 +159,7 @@ display: inherit;
         letter-spacing: 1.2ch;
         padding-left: 1.2ch;
     }
+
     .flex-box-flag{
         width: 30%; 
     }
