@@ -11,8 +11,7 @@ function flipCard() {
 
 for (let i = 0; i < flags.length; i++) {
     document.getElementsByClassName('card-container')[i].addEventListener('click', function () {
-        if (document.getElementsByClassName('card-container is-flipped')[0] != undefined) {
-            //document.getElementsByClassName('card-container is-flipped')[0].style.transitionDuration = "0s";
+        if (document.getElementsByClassName('card-container is-flipped')[0] != undefined && document.getElementsByClassName('card-container is-flipped')[0] != this) {
             document.getElementsByClassName('card-container is-flipped')[0].classList.toggle('is-flipped');
         }
         document.getElementsByClassName('card-container')[i].classList.toggle('is-flipped');
