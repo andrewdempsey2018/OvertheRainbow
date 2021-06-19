@@ -1,7 +1,7 @@
-
 // Landing Page redirect
 let checkbox = document.getElementById("chevron-checkbox");
 let title = document.getElementById("landing-title");
+let navbar = document.getElementById("navbar");
 
 if(checkbox){
     checkbox.addEventListener("click", () => {
@@ -15,6 +15,11 @@ if(checkbox){
             window.location = "/home";
         }, 400);
     });
+}
+
+// Set display of navbar to none for root path only (aka index in app.py)
+if(window.location.pathname == '/'){
+    navbar.style.display = "none";
 }
 
 // Navigation Bar Toggle

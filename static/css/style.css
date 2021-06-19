@@ -19,6 +19,11 @@
     box-sizing: border-box;
 }
 
+html {
+    /* Overflow-y set to auto to counteract always visible scrollbar set via Bulma */
+    overflow-y: auto;
+}
+
 body {
     background-color: var(--p1-dark);
     color: var(--p1-light);
