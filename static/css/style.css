@@ -24,7 +24,17 @@ body {
     color: var(--p1-light);
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    align-items: center;
+}
+
+.navbar {
+    height: 5em;
+    width: 100%;
+}
+
+.navbar-item>img {
+    width: 5em;
+    max-height: 5em;
 }
 
 /* Landing Page */

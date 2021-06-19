@@ -26,7 +26,43 @@
     <body>
 
         <!-- Navbar -->
-
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="#">
+                <img src="{{ url_for('static', filename='images/Logo1-tinypng.png') }}">
+              </a>
+          
+              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-end">
+                <a href="#" class="navbar-item">
+                  <strong>Home</strong>
+                </a>
+          
+                <a href="#" class="navbar-item">
+                  <strong>Support</strong>
+                </a>
+          
+                <a href="#" class="navbar-item">
+                  <strong>Flags</strong>
+                </a>
+              </div>
+          
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a href="#" class="button is-dark">
+                    <strong>Open Chat</strong>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </nav>
         <!-- main block for child template injection -->
         {% block content %}{% endblock %}
 
