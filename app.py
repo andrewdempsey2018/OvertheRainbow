@@ -1,4 +1,5 @@
 import os
+import json
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 
 app = Flask(__name__)
@@ -7,6 +8,24 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template('index.html')
+
+@app.route("/test")
+def test():
+    return render_template('test.html')
+
+
+
+@app.route("/home")
+def home():
+    return render_template('home.html')
+
+
+@app.route("/flags")
+def flags():
+    data = []
+    with open("data/flags.json", "r", encoding="utf8") as json_data:
+        data = json.load(json_data)
+    return render_template("flags.html", page_title="Meet the flags", flags=data)
 
 
 @app.route("/privacy")
