@@ -1,5 +1,92 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>home page</h1>
-{% endblock %}
+
+<h1 class="title is-1 has-text-white"> {{ page_title }}</h1>
+
+<div class="container is-fluid">
+
+    <!-- Bulma docs sugges empty columns to help with spacing
+    https://bulma.io/documentation/columns/options/ -->
+    <div class="column"></div>
+
+    <div class="columns">
+        <div class="column">
+            <figure class="image is-fullwidth">
+                <img src="{{ url_for('static', filename='images/home_temp.png') }}">
+            </figure>
+        </div>
+        <div class="column has-text-centered">
+            <p class="mb-5 is-size-6">"No matter how you feel, never be afraid to take a step
+                over the rainbow. Here you will find that you are not
+                alone, weather you need help or just someone to talk to, always reach out. Be proud of who you are
+                because you are amazing!"</p>
+            <div class="column">
+                <a href="#" class="button is-rounded">Learn about LGBT advocates</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="columns">
+        <div class="column">
+            <div class="card card-mission-1">
+                <div class="card-content">
+                    <div class="content">
+                        "I am a light for myself and others. My story will inspire those who have been hurt to shine. I
+                        will be an example for others who need it. I will no longer stay hidden."
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Bulma docs BILL:"You're absolutely right. Where we going, girls? 
+            NUALA:(laughs) Where the rainbow ends. -->
+        <div class="column">
+            <div class="card card-mission-2">
+                <div class="card-content">
+                    <div class="content">
+                        “If I wait for someone else to validate my existence, it will mean that I'm shortchanging
+                        myself.”
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="columns">
+
+        <!--Bulma docs GAYLE: Don't you want to go where the rainbow ends? 
+            BILL: Do I want to go where the rainbow ends? -->
+        <div class="column">
+            <div class="card card-mission-3">
+                <div class="card-content">
+                    <div class="content">
+                        “The richness, beauty and depths of love can only be fully experienced in a climate of complete
+                        openness, honesty and vulnerability.”
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card card-mission-4">
+                <div class="card-content">
+                    <div class="content">
+                        "When efvery person in the world is treated as equal, no matter who they are or whom they love,
+                        we are all more free."
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bulma docs sugges empty columns to help with spacing -->
+    <div class="column"></div>
+
+    <div class="column has-text-centered">
+        <a href="https://spunout.ie/help/categories/lgbt" class="info_link" target="_blank">Irish LGBTQ info</a>
+    </div>
+    {% endblock %}
