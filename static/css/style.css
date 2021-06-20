@@ -222,8 +222,13 @@ figure {
 }
 
 /* Accessibility Page */
-.access-logo {
-    height: 12em;
+.container {
+    background-color: var(--p1-light);
+}
+
+/* 500 Page */
+.error-500 {
+    width: 40%;
 }
 
 /* Media Queries */

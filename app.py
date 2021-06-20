@@ -25,6 +25,11 @@ def home():
     return render_template('home.html', page_title="Over the Rainbow")
 
 
+@app.route("/error500")
+def error500():
+    return render_template('error-500.html')
+
+
 @app.route("/flags")
 def flags():
     data = []
