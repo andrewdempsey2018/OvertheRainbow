@@ -233,7 +233,7 @@ body {
         padding-left: 25px;
     }
     .carousel-cell {
-        width: 47.25%;
+        width: 47%;
         height: auto;
     }
     .flickity-prev-next-button.previous {
@@ -270,7 +270,7 @@ body {
         padding-left: 0px;
     }
     .carousel-cell {
-        width: 31.35%;
+        width: 31.5%;
     }
     
     .flickity-prev-next-button.previous {
