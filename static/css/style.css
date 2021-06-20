@@ -246,10 +246,18 @@ body {
     width: 50%;
 }
 
+.w100 {
+    width: 100%;
+}
+
 /* 404 page*/
 .pokemon-image {
     height: auto;
     width: 50%;
+}
+
+.right {
+    float: right;
 }
 
 

@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="container is-fluid content">
+    <h2 class="has-text-centered title has-text-white">Zamazenta come back, Rayquaza I choose you</h2>
 
-<p>Zamazenta come back, Rayquaza I choose you</p>
+<h2 class="is-size-3 has-text-white has-text-centered">Now use Dragon Tail.</h2>
 
-<p>Now use Dragon Tail.</p>
-
-<p>Wait, you are not supposed to be here, this is pokemon gym battle, please go back and continue your thing.</p>
-
+<p class="is-size-1">Wait, you are not supposed to be here, this is pokemon gym battle, please go back and continue your thing.</p>
+</div>
 <img class="pokemon-image" src="{{ url_for('static', filename='images/rayquaza.png') }}" alt="rayquaza pokemon">
-<img class="pokemon-image" src="{{ url_for('static', filename='images/megabeedrill.png') }}" alt="megabeedrill pokemon">
+<img class="pokemon-image right" src="{{ url_for('static', filename='images/megabeedrill.png') }}" alt="megabeedrill pokemon">
 <img class="pokemon-image" src="{{ url_for('static', filename='images/zamazenta.png') }}" alt="Zamazenta pokemon">
-<img class="pokemon-image" src="{{ url_for('static', filename='images/zacian.png') }}" alt="zacian pokemon">
+<img class="pokemon-image right" src="{{ url_for('static', filename='images/zacian.png') }}" alt="zacian pokemon">
 
 {% endblock %}
