@@ -15,11 +15,6 @@ def accessibility():
     return render_template('accessibility.html')
 
 
-@app.route("/support")
-def support():
-    return render_template('support.html')
-
-
 @app.route("/home")
 def home():
     return render_template('home.html', page_title="Over the Rainbow")
@@ -36,6 +31,14 @@ def flags():
     with open("data/flags.json", "r", encoding="utf8") as json_data:
         data = json.load(json_data)
     return render_template("flags.html", page_title="Meet the flags", flags=data)
+
+
+@app.route("/support")
+def support():
+    data = []
+    with open("data/advocates.json", "r") as json_data:
+        data = json.load(json_data)
+    return render_template("support.html", page_title="Supporting LGBTQ+ Community", advocates=data)
 
 
 if __name__ == "__main__":

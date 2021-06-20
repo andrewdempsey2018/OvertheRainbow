@@ -123,6 +123,11 @@ body {
     opacity: 0;
 }
 
+/*-------------- Flags page ----------------*/
+
+.container-flag-intro{
+    margin: 0 auto;
+}
 /* Home page */
 .card-mission-1 {
     background-color: var(--red);
@@ -211,14 +216,72 @@ body {
     transform: rotateY(180deg);
 }
 
-figure {
+.figure-flag{
     max-height: 200px;
     max-width: 350px;
     margin: 0 auto;
 }
 
-.image {
+.image-flag{
     display: inherit;
+}
+
+/*-------------------- Support page ---------------------------*/
+
+.about-bg-img{
+    background-image: url("/static/images/support_about.jpg");
+    background-color: #cccccc; 
+    min-height: 350px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.btn-support{
+    height: 55px;
+}
+
+.btn-support:hover{
+    transform: scale(1.03);
+    transition: transform 1.5s;
+    background-color: var(--orange);
+}
+
+/* flickity small rounded square buttons*/
+/*https://flickity.metafizzy.co/style.html*/
+.p-advocate{
+    margin-bottom: 25px;
+}
+.carousel-cell {
+    width: 98%;
+}
+
+.flickity-prev-next-button {
+    width: 33px;
+    height: 33px;
+    border-radius: 5px;
+    background: var(--p1-light);
+}
+
+.flickity-prev-next-button:hover {
+    background: var(--orange);
+}
+
+/* position outside */
+.flickity-prev-next-button.previous {
+    left: 0px;
+    top: -25px;
+}
+
+.flickity-prev-next-button.next {
+    right: 10px;
+    top: -25px;
+}
+
+.img-advocates{
+    overflow: hidden;
+    max-height: 175px;
+    object-fit: cover;
 }
 
 /* Accessibility Page */
@@ -243,6 +306,31 @@ figure {
         width: 45%;
         height: 300px;
     }
+    /*-----------------------carousel-----------------------------*/
+    .p-advocate{
+        margin-bottom: 0px;
+    }
+
+    .carousel{
+        padding-left: 25px;
+    }
+    .carousel-cell {
+        width: 47%;
+        height: auto;
+    }
+    .flickity-prev-next-button.previous {
+        left: -15px;
+        top: 45%;
+    }
+
+    .flickity-prev-next-button.next {
+        right: -15px;
+        top: 45%;
+    }
+
+    .img-advocates {
+        height: 225px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -254,6 +342,27 @@ figure {
     .flex-box-flag {
         width: 30%;
     }
+
+    .content-container{
+        margin-left: 15px;
+    }
+    
+    /*-----------------------carousel-----------------------------*/
+    .carousel{
+        padding-left: 0px;
+    }
+    .carousel-cell {
+        width: 31.5%;
+    }
+    
+    .flickity-prev-next-button.previous {
+        left: -45px;
+    }  
+
+    .flickity-prev-next-button.next {
+        right: -45px;
+    }
+    
 }
 
 @media (min-width: 1216px) {
