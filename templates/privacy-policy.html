@@ -21,7 +21,7 @@
       </p>
          
       <h2>General Data Protection Regulation (GDPR)</h2>
-        <!-- <img src="/static/image/fingerprint.png" alt="colorful fingerprint"> why it is on top of the page -->
+        <img src="{{ url_for('static', filename='images/fingerprint.png') }}" alt="colorful fingerprint"> why it is on top of the page
          <p>
              We are a Data Controller of your information.
          </p>
@@ -56,7 +56,7 @@
         </ul>
            </div>
          
-  <br>
+  
       <h2>Website Visitors</h2>
           <p>
               Like most website operators, Over the Rainbow collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. Over the Rainbow's purpose in collecting non-personally identifying information is to better understand how Over the Rainbow visitors use its website.
@@ -106,7 +106,7 @@
            Although most changes are likely to be minor, Over the Rainbow may change its Privacy Policy from time to time, and in Over the Rainbow sole discretion. Over the Rainbow encourages visitors to frequently check this page for any changes to its Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.
         </p>
         
-        <!-- <img src="/static/image/playdough.jpg" alt="lgbtq playdough"> -->
+        <img src="{{ url_for('static', filename='images/playdough.jpg') }}" alt="lgbtq playdough">
   
       <h2>Consent</h2>
   
@@ -114,9 +114,7 @@
            By using our website, you hereby consent to our Privacy Policy and agree to its terms.
         </p>
   
-  <!-- <img class="zebra" src=static/image/zebralogo.png alt="zebra with rainbow color"> need to link the image properly -->
+  <img class="zebra" src="{{ url_for('static', filename='images/logo1-tinypng.png') }}" alt="zebra with rainbow color"> need to link the image properly
   
-
 </div>
-
 {% endblock %}
