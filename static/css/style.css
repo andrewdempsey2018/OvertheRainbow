@@ -7,6 +7,8 @@
     --green: #007f24;
     --blue: #004dff;
     --purple: #790589;
+    --lightblue: #9ad5f3;
+    --lightpink: #e9abb8;
     --p1-dark: #2d2d2d;
     --p1-light: #fefefe;
 }
@@ -19,26 +21,63 @@
     box-sizing: border-box;
 }
 
+html {
+    /* Overflow-y set to auto to counteract always visible scrollbar set via Bulma */
+    overflow-y: auto;
+}
+
 body {
     background-color: var(--p1-dark);
     color: var(--p1-light);
-    /*height: 100vh;*/
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+    /* Navbar */
 .navbar {
-    height: 5em;
+    height: 6.5em;
     width: 100%;
 }
 
 .navbar-item>img {
-    width: 5em;
-    max-height: 5em;
+    max-height: 6em;
+    padding-bottom: 10px;
+}
+
+.navbar-end>.navbar-item:not(:last-child)::after {
+    content: '';
+    display: inline-block;
+    height: 2em;
+    width: 2px;
+    background-color: var(--p1-dark);
+    margin-left: 1.5rem;
+}
+
+.button-text::after {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid var(--p1-dark);
+    background-image: linear-gradient(90deg,
+        var(--lightblue) 0, var(--lightblue) 20%,
+        var(--lightpink) 20%, var(--lightpink) 40%,
+        var(--p1-light) 40%, var(--p1-light) 60%,
+        var(--lightpink) 60%, var(--lightpink) 80%,
+        var(--lightblue) 80%, var(--lightblue) 100%
+    );
 }
 
 /* Landing Page */
+
+.full-height {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .landing-container {
     height: 50vh;
@@ -48,7 +87,7 @@ body {
     justify-content: space-around;
 }
 
-.landing-container h1 {
+#landing-title {
     font-family: 'Noto Sans', sans-serif;
     font-size: 600%;
     user-select: none;
@@ -58,12 +97,12 @@ body {
     display: none;
 }
 
-.fa-chevron-down {
+.fa-heart {
     font-size: 4rem;
     transition: all .35s ease-in-out;
 }
 
-.fa-chevron-down:hover {
+.fa-heart:hover {
     transform: scale(1.5);
     background-image: linear-gradient(90deg,
         var(--red), var(--red),
@@ -76,8 +115,15 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
+    transition: all .6s cubic-bezier(0.86, 0, 0.07, 1);
 }
-/* flags page */
+
+#chevron-checkbox:checked ~ .chevron-checkbox-label>.fa-heart {
+    transform: scale(1000);
+    opacity: 0;
+}
+
+/* Flags page */
 
 .container{
     width: 100%;
@@ -94,14 +140,14 @@ body {
 .card-container{
     width: 100%;
     height: 100%;
-    transition: transform 1.2s;
+    transition: transform .6s;
     transform-style: preserve-3d;
     position: relative;
 }
 
 .card-container:hover, .card-container:active{
     transform: scale(.97);
-    transition: transform 2s;
+    transition: transform .6s;
 }
 
 .card-container.is-flipped {
@@ -134,7 +180,7 @@ figure{
 }
 
 .image{
-display: inherit;
+    display: inherit;
 }
 
 /* Accessibility Page */
@@ -167,6 +213,7 @@ display: inherit;
         letter-spacing: 0.6ch;
         padding-left: 0.6ch;
     }
+
     .flex-box-flag{
         width: 45%; 
         height: 300px;
