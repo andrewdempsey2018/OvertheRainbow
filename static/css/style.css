@@ -183,6 +183,11 @@ figure{
     display: inherit;
 }
 
+/* Accessibility Page */
+.access-logo {
+    height: 12em;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {
