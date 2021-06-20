@@ -201,6 +201,7 @@ body {
 
 .info_link
 {
+    transition: all .2s ease-in-out; 
     color:#FFFFFF;
 }
 
@@ -211,6 +212,7 @@ body {
 
 .info_link:hover 
 {
+    transform: scale(1.5);
     font-weight: bold;
 }
 
