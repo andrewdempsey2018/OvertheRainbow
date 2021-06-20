@@ -36,22 +36,40 @@ body {
 
     /* Navbar */
 .navbar {
-    height: 6.5em;
     width: 100%;
 }
 
 .navbar-item>img {
-    max-height: 6em;
+    max-height: 5em;
     padding-bottom: 10px;
 }
 
-.navbar-end>.navbar-item:not(:last-child)::after {
-    content: '';
-    display: inline-block;
-    height: 2em;
-    width: 2px;
-    background-color: var(--p1-dark);
-    margin-left: 1.5rem;
+.navbar-burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    color: var(--p1-dark);
+}
+
+.navbar-burger:hover, .navbar-burger:active, .navbar-burger:focus {
+    background-image: linear-gradient(90deg,
+        var(--p1-light), var(--p1-light), var(--p1-light),
+        var(--red), var(--red),
+        var(--orange), var(--orange),
+        var(--yellow), var(--yellow),
+        var(--green), var(--green),
+        var(--blue), var(--blue),
+        var(--purple), var(--purple),
+        var(--p1-light), var(--p1-light), var(--p1-light)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--p1-dark);
 }
 
 .button-text::after {
@@ -186,7 +204,7 @@ figure{
 /* Media Queries */
 
 @media (min-width: 768px) {
-    .landing-container h1 {
+    #landing-title {
         letter-spacing: 0.6ch;
         padding-left: 0.6ch;
     }
@@ -198,18 +216,34 @@ figure{
 }
 
 @media (min-width: 1024px) {
-    .landing-container h1 {
+    /* Navbar */
+    .navbar-end>.navbar-item:not(:last-child)::after {
+        content: '';
+        display: inline-block;
+        height: 2em;
+        width: 2px;
+        background-color: var(--p1-dark);
+        margin-left: 1.5rem;
+    }
+
+    .navbar-burger {
+        display: none;
+    }
+
+    /* Landing Page */
+    #landing-title {
         letter-spacing: 1.2ch;
         padding-left: 1.2ch;
     }
 
+    /* Flag page */
     .flex-box-flag{
         width: 30%; 
     }
 }
 
 @media (min-width: 1216px) {
-    .landing-container h1 {
+    #landing-title {
         letter-spacing: 2ch;
         padding-left: 2ch;
     }
