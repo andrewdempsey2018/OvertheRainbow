@@ -2,8 +2,8 @@
 
 {% block content %}
     <div class="container">
-        <div class="card my-4 p-5">
-            <h1 class="has-text-centered has-text-white title is-2 is-spaced">Accessibility Statement</h1>
+        <div>
+            <h1 class="has-text-centered has-text-white title is-2 is-spaced my-4 p-5">Accessibility Statement</h1>
             <div class="subtitle-negative-margin p-5">
                 <p class="has-text-centered has-text-white subtitle is-6 is-spaced">Over The Rainbow, (and associated such as OTR), is committed to facilitating the accessibility and usability of its Web site, https://www.overtherainbow.com,
                     for all people with disabilities. Over The Rainbow has implemented and will continue to implement the relevant portions
@@ -14,8 +14,8 @@
             </div>
         </div>
         
-        <div class="has-text-centered is-5by4">
-            <img src="{{ url_for('static', filename='images/Logo1-tinypng.png') }}" alt="OTR Logo">
+        <div class="image is-128x128 level-item has-text-centered">
+            <img class="" src="{{ url_for('static', filename='images/Logo1-tinypng.png') }}" alt="OTR Logo">
         </div>
     </div>
 {% endblock %}
