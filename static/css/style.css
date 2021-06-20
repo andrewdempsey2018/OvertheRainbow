@@ -7,6 +7,8 @@
     --green: #007f24;
     --blue: #004dff;
     --purple: #790589;
+    --lightblue: #9ad5f3;
+    --lightpink: #e9abb8;
     --p1-dark: #2d2d2d;
     --p1-light: #fefefe;
 }
@@ -19,6 +21,11 @@
     box-sizing: border-box;
 }
 
+html {
+    /* Overflow-y set to auto to counteract always visible scrollbar set via Bulma */
+    overflow-y: auto;
+}
+
 body {
     background-color: var(--p1-dark);
     color: var(--p1-light);
@@ -27,14 +34,40 @@ body {
     align-items: center;
 }
 
+    /* Navbar */
 .navbar {
-    height: 5em;
+    height: 6.5em;
     width: 100%;
 }
 
 .navbar-item>img {
-    width: 5em;
-    max-height: 5em;
+    max-height: 6em;
+    padding-bottom: 10px;
+}
+
+.navbar-end>.navbar-item:not(:last-child)::after {
+    content: '';
+    display: inline-block;
+    height: 2em;
+    width: 2px;
+    background-color: var(--p1-dark);
+    margin-left: 1.5rem;
+}
+
+.button-text::after {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid var(--p1-dark);
+    background-image: linear-gradient(90deg,
+        var(--lightblue) 0, var(--lightblue) 20%,
+        var(--lightpink) 20%, var(--lightpink) 40%,
+        var(--p1-light) 40%, var(--p1-light) 60%,
+        var(--lightpink) 60%, var(--lightpink) 80%,
+        var(--lightblue) 80%, var(--lightblue) 100%
+    );
 }
 
 .title {
@@ -75,13 +108,13 @@ body {
 .fa-heart:hover {
     transform: scale(1.5);
     background-image: linear-gradient(90deg,
-        var(--red), var(--red),
-        var(--orange), var(--orange),
-        var(--yellow), var(--yellow),
-        var(--green), var(--green),
-        var(--blue), var(--blue),
-        var(--purple), var(--purple)
-    );
+            var(--red), var(--red),
+            var(--orange), var(--orange),
+            var(--yellow), var(--yellow),
+            var(--green), var(--green),
+            var(--blue), var(--blue),
+            var(--purple), var(--purple)
+            );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
@@ -93,38 +126,81 @@ body {
     opacity: 0;
 }
 
+/*-------------- Flags page ----------------*/
+
+.container-flag-intro{
+    margin: 0 auto;
+}
+/* Home page */
+.card-mission-1 {
+    background-color: var(--red);
+    color: white;
+}
+
+.card-mission-2 {
+    background-color: var(--orange);
+    color: black;
+}
+
+.card-mission-3 {
+    background-color: var(--yellow);
+    color: black;
+}
+
+.card-mission-4 {
+    background-color: var(--green);
+    color: white;
+}
+
+.info_link
+{
+    color:#FFFFFF;
+}
+
+.info_link:visited
+{
+    color:#FFFFFF;
+}
+
+.info_link:hover 
+{
+    font-weight: bold;
+}
+
 /* Flags page */
 
-.container{
+.container {
     width: 100%;
 }
 
-.flex-box-flag{
-    width: 90%; 
+.flex-box-flag {
+    width: 90%;
     height: 275px;
     margin-bottom: 25px;
 }
 
 /*Card flitp adapted from: https://3dtransforms.desandro.com/card-flip*/
 
-.card-container{
+.card-container {
     width: 100%;
     height: 100%;
-    transition: transform 1.2s;
+    transition: transform .6s;
     transform-style: preserve-3d;
     position: relative;
 }
 
-.card-container:hover, .card-container:active{
+.card-container:hover,
+.card-container:active {
     transform: scale(.97);
-    transition: transform 2s;
+    transition: transform .6s;
 }
 
 .card-container.is-flipped {
     transform: rotateY(180deg);
 }
 
-.card-front, .card-back{
+.card-front,
+.card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -132,24 +208,24 @@ body {
     backface-visibility: hidden;
 }
 
-.card-front{
+.card-front {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.card-back{
+.card-back {
     overflow-y: auto;
     transform: rotateY(180deg);
 }
 
-figure{
+.figure-flag{
     max-height: 200px;
     max-width: 350px;
     margin: 0 auto;
 }
 
-.image{
+.image-flag{
     display: inherit;
 }
 
@@ -160,6 +236,73 @@ figure{
 }
 
 
+/*-------------------- Support page ---------------------------*/
+
+.about-bg-img{
+    background-image: url("/static/images/support_about.jpg");
+    background-color: #cccccc; 
+    min-height: 350px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.btn-support{
+    height: 55px;
+}
+
+.btn-support:hover{
+    transform: scale(1.03);
+    transition: transform 1.5s;
+    background-color: var(--orange);
+}
+
+/* flickity small rounded square buttons*/
+/*https://flickity.metafizzy.co/style.html*/
+.p-advocate{
+    margin-bottom: 25px;
+}
+.carousel-cell {
+    width: 98%;
+}
+
+.flickity-prev-next-button {
+    width: 33px;
+    height: 33px;
+    border-radius: 5px;
+    background: var(--p1-light);
+}
+
+.flickity-prev-next-button:hover {
+    background: var(--orange);
+}
+
+/* position outside */
+.flickity-prev-next-button.previous {
+    left: 0px;
+    top: -25px;
+}
+
+.flickity-prev-next-button.next {
+    right: 10px;
+    top: -25px;
+}
+
+.img-advocates{
+    overflow: hidden;
+    max-height: 175px;
+    object-fit: cover;
+}
+
+/* Accessibility Page */
+.container {
+    background-color: var(--p1-light);
+}
+
+/* 500 Page */
+.error-500 {
+    width: 40%;
+}
 
 /* Media Queries */
 
@@ -169,9 +312,34 @@ figure{
         padding-left: 0.6ch;
     }
 
-    .flex-box-flag{
-        width: 45%; 
+    .flex-box-flag {
+        width: 45%;
         height: 300px;
+    }
+    /*-----------------------carousel-----------------------------*/
+    .p-advocate{
+        margin-bottom: 0px;
+    }
+
+    .carousel{
+        padding-left: 25px;
+    }
+    .carousel-cell {
+        width: 47%;
+        height: auto;
+    }
+    .flickity-prev-next-button.previous {
+        left: -15px;
+        top: 45%;
+    }
+
+    .flickity-prev-next-button.next {
+        right: -15px;
+        top: 45%;
+    }
+
+    .img-advocates {
+        height: 225px;
     }
 }
 
@@ -181,9 +349,30 @@ figure{
         padding-left: 1.2ch;
     }
 
-    .flex-box-flag{
-        width: 30%; 
+    .flex-box-flag {
+        width: 30%;
     }
+
+    .content-container{
+        margin-left: 15px;
+    }
+    
+    /*-----------------------carousel-----------------------------*/
+    .carousel{
+        padding-left: 0px;
+    }
+    .carousel-cell {
+        width: 31.5%;
+    }
+    
+    .flickity-prev-next-button.previous {
+        left: -45px;
+    }  
+
+    .flickity-prev-next-button.next {
+        right: -45px;
+    }
+    
 }
 
 @media (min-width: 1216px) {

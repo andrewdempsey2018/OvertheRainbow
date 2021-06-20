@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- External libraries/frameworks CSS links -->
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -26,43 +28,39 @@
     <body>
 
         <!-- Navbar -->
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav class="navbar" id="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-              <a class="navbar-item" href="#">
-                <img src="{{ url_for('static', filename='images/Logo1-tinypng.png') }}">
-              </a>
-          
-              <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-              </a>
+                <a class="navbar-item" href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='images/Logo1-tinypng.png') }}">
+                </a>
+                
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
             </div>
           
             <div id="navbarBasicExample" class="navbar-menu">
-              <div class="navbar-end">
-                <a href="#" class="navbar-item">
-                  <strong>Home</strong>
-                </a>
-          
-                <a href="#" class="navbar-item">
-                  <strong>Support</strong>
-                </a>
-          
-                <a href="#" class="navbar-item">
-                  <strong>Flags</strong>
-                </a>
-              </div>
-          
-              <div class="navbar-item">
-                <div class="buttons">
-                  <a href="#" class="button is-dark">
-                    <strong>Open Chat</strong>
-                  </a>
+                <div class="navbar-end">
+                    <a href="{{ url_for('home') }}" class="navbar-item">
+                        <strong>Home</strong>
+                    </a>
+                    <a href="{{ url_for('support') }}" class="navbar-item">
+                        <strong>Support</strong>
+                    </a>
+                    <a href="{{ url_for('flags') }}" class="navbar-item">
+                        <strong>Flags</strong>
+                    </a>
                 </div>
-              </div>
+                
+                <div class="navbar-item">
+                    <a href="#" class="button button-color">
+                        <strong class="button-text">Open Chat</strong>
+                    </a>
+                </div>
             </div>
-          </nav>
+        </nav>
         <!-- main block for child template injection -->
         {% block content %}{% endblock %}
 
@@ -71,6 +69,7 @@
         <!-- External libraries/frameworks JS links -->
 
         <!-- Project main JS file -->
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     </body>
 </html>
