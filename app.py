@@ -10,9 +10,9 @@ def index():
     return render_template('index.html')
 
 
-@app.route("/test")
-def test():
-    return render_template('test.html')
+@app.route("/accessibility")
+def accessibility():
+    return render_template('accessibility.html')
 
 
 @app.route("/support")

@@ -184,27 +184,12 @@ figure{
 }
 
 /* Accessibility Page */
-.card-title {
-    font-size: xx-large;
-    text-align: center;
-    padding: 1.5em 0;
+.container {
+    background-color: var(--p1-light);
 }
 
-.card-text {
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 16px;
-    padding: 1rem 15%;
-    text-align: center;
-}
+/* 500 Page */
 
-.img-fluid {
-    width: 250px;
-}
-
-.text-center {
-    text-align: center !important;
-    background-color: white;
-}
 
 /* Media Queries */
 
