@@ -284,11 +284,6 @@ body {
     object-fit: cover;
 }
 
-/* Accessibility Page */
-.container {
-    background-color: var(--p1-light);
-}
-
 /* 500 Page */
 .error-500 {
     width: 40%;
