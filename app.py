@@ -18,6 +18,14 @@ def flags():
     return render_template("flags.html", page_title="Meet the flags", flags=data)
 
 
+@app.route("/support")
+def support():
+    data = []
+    with open("data/advocates.json", "r") as json_data:
+        data = json.load(json_data)
+    return render_template("support.html", page_title="Supporting LGBTQ+ Community", advocates=data)
+
+
 if __name__ == "__main__":
     app.run(
         host = os.environ.get('IP', '127.0.0.1'),

@@ -128,6 +128,66 @@ figure{
 display: inherit;
 }
 
+/* Support page */
+
+.test1{
+    border: 1px solid red;
+}
+.test{
+    border: 1px solid white;
+}
+
+.figure-default{
+    display: block;
+    max-height: 375px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-y: hidden;
+}
+
+.btn-support{
+    height: 55px;
+}
+
+.btn-support:hover{
+    transform: scale(1.03);
+    transition: transform 1.5s;
+    background-color: var(--orange);
+}
+
+/* flickity small rounded square buttons*/
+/*https://flickity.metafizzy.co/style.html*/
+
+.carousel-cell {
+    width: 98%;
+}
+
+.flickity-prev-next-button {
+    width: 33px;
+    height: 33px;
+    border-radius: 5px;
+    background: var(--p1-light);
+}
+
+.flickity-prev-next-button:hover {
+    background: var(--orange);
+}
+
+/* position outside */
+.flickity-prev-next-button.previous {
+    left: -15px;
+    top: 45%;
+}
+
+.flickity-prev-next-button.next {
+    right: -15px;
+    top: 45%;
+}
+
+.img-advocates{
+    overflow: hidden;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {
@@ -139,6 +199,10 @@ display: inherit;
         width: 45%; 
         height: 300px;
     }
+    /*-----------------------carousel-----------------------------*/
+    .carousel-cell {
+        width: 47.45%;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -146,8 +210,27 @@ display: inherit;
         letter-spacing: 1.2ch;
         padding-left: 1.2ch;
     }
+
     .flex-box-flag{
         width: 30%; 
+    }
+
+    .content-container{
+        margin-left: 15px;
+    }
+    
+    /*-----------------------carousel-----------------------------*/
+
+    .carousel-cell {
+        width: 31.35%;
+    }
+
+    .flickity-prev-next-button.previous {
+        left: -5px;
+    }  
+
+    .flickity-prev-next-button.next {
+        right: -5px;
     }
 }
 
