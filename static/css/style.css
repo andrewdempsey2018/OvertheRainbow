@@ -238,11 +238,12 @@ body {
 #fingerprint {
     height: 30%;
     width: 10%;
+    float: right;
 }
 
 #playdough {
     height: 50%;
-    width: 30%;
+    width: 50%;
 }
 
 /* 404 page*/
