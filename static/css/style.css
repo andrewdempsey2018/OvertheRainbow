@@ -189,7 +189,9 @@ figure{
 }
 
 /* 500 Page */
-
+.error-500 {
+    width: 40%;
+}
 
 /* Media Queries */
 

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container error-500">
+        <div class="my-4 p-5">
+            <h1 class="has-text-centered title is-1">500</h1>
+            <div>
+                <p class="has-text-centered subtitle is-6">Well, this isn't right.</p>
+            </div>
+        </div>
+        <div class="subtitle-negative-margin">
+            <p class="has-text-centered subtitle is-6">Sorry, it's not you, it's me. Click our logo to check out our site!</p>
+        </div>
+        <div class="has-text-centered">
+            <img src="{{ url_for('static', filename='images/500-page-tinypng.png') }}" alt="Irishbecky's Easter Egg">
+        </div>
+    </div>>
+{% endblock %}
