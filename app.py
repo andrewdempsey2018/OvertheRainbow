@@ -46,6 +46,11 @@ def support():
     return render_template("support.html", page_title="Supporting LGBTQ+ Community", advocates=data)
 
 
+@app.route("/error")
+def error():
+    return render_template("404.html")
+
+
 if __name__ == "__main__":
     app.run(
         host = os.environ.get('IP', '127.0.0.1'),
