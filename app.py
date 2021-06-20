@@ -22,7 +22,7 @@ def support():
 
 @app.route("/home")
 def home():
-    return render_template('home.html')
+    return render_template('home.html', page_title="Over the Rainbow")
 
 
 @app.route("/error500")
