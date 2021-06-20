@@ -7,6 +7,8 @@
     --green: #007f24;
     --blue: #004dff;
     --purple: #790589;
+    --lightblue: #9ad5f3;
+    --lightpink: #e9abb8;
     --p1-dark: #2d2d2d;
     --p1-light: #fefefe;
 }
@@ -32,14 +34,40 @@ body {
     align-items: center;
 }
 
+    /* Navbar */
 .navbar {
-    height: 5em;
+    height: 6.5em;
     width: 100%;
 }
 
 .navbar-item>img {
-    width: 5em;
-    max-height: 5em;
+    max-height: 6em;
+    padding-bottom: 10px;
+}
+
+.navbar-end>.navbar-item:not(:last-child)::after {
+    content: '';
+    display: inline-block;
+    height: 2em;
+    width: 2px;
+    background-color: var(--p1-dark);
+    margin-left: 1.5rem;
+}
+
+.button-text::after {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid var(--p1-dark);
+    background-image: linear-gradient(90deg,
+        var(--lightblue) 0, var(--lightblue) 20%,
+        var(--lightpink) 20%, var(--lightpink) 40%,
+        var(--p1-light) 40%, var(--p1-light) 60%,
+        var(--lightpink) 60%, var(--lightpink) 80%,
+        var(--lightblue) 80%, var(--lightblue) 100%
+    );
 }
 
 /* Landing Page */
