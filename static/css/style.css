@@ -37,6 +37,9 @@ body {
     max-height: 5em;
 }
 
+.title {
+    color: var(--p1-light);
+}
 /* Landing Page */
 
 .full-height {
@@ -149,6 +152,14 @@ figure{
 .image{
     display: inherit;
 }
+
+/* privacy policy page*/
+.pp-image {
+    height: auto;
+    width: 10%;
+}
+
+
 
 /* Media Queries */
 

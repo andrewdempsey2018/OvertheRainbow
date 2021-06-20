@@ -2,14 +2,13 @@
 
 {% block content %}
 <div class="container is-fluid">
-  <h1 class="has-text-centered">Privacy Policy</h1>
+  <h1 class="has-text-centered title">Privacy Policy</h1>
 
-  <!--below image doesn't load-->
-  <!-- <img src="https://images.pexels.com/photos/1212407/pexels-photo-1212407.jpeg?cs=srgb&dl=pexels-sharon-mccutcheon-1212407.jpg&fm=jpg" alt="rainbow paint"> -->
+  <img class="image pp-image" src="{{ url_for('static', filename='images/paint.jpg') }}" alt="rainbow paint">
   
   <small class="has-text-right">Effective 21 June 2021</small>
   
-  <h2>Summary</h2>
+  <h1>Summary</h1>
   
   <p>
       The intention of this document is to explain as clearly as possible Over the Rainbow intention in gathering information about the users of our website. We gather information in two ways. General statistics through Google Analytics and contact information submitted to us through our contact form. Over the Rainbow undertakes not to sell or rent to any third party whatsoever any personally identifiable information about you.
@@ -29,12 +28,15 @@
          <p>
              Over the Rainbow legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Information we collect and the specific context in which we collect the information:
          </p>
-         <ul>
-             <li>Over the Rainbow needs to perform a contract with you.</li>
-             <li>You have given Over the Rainbow permission to do so.</li>
-             <li>Processing your personal information is in Over the Rainbow legitimate interests.</li>
-             <li>Over the Rainbow needs to comply with the law.</li>
-         </ul>
+         <div class="content">
+          <ul class="is-lower-roman">
+            <li>Over the Rainbow needs to perform a contract with you.</li>
+            <li>You have given Over the Rainbow permission to do so.</li>
+            <li>Processing your personal information is in Over the Rainbow legitimate interests.</li>
+            <li>Over the Rainbow needs to comply with the law.</li>
+        </ul>
+         </div>
+        
          <p>
               Over the Rainbow will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.
          </p>
@@ -42,14 +44,18 @@
               If you are a resident of the European Economic Area (EEA), you have certain data protection rights. If you wish to be informed what Personal Information we hold about you and if you want it to be removed from our systems, please contact us.
               In certain circumstances, you have the following data protection rights:        
            </p>
-          <ul>
-              <li>The right to access, update or to delete the information we have on you.</li>
-              <li>The right of rectification.</li>
-              <li>The right to object.</li>
-              <li>The right of restriction.</li>
-              <li>The right to data portability.</li>
-              <li>The right to withdraw consent.</li>
-          </ul>
+
+           <div class="content">
+            <ul class="is-lower-roman"></ul>
+            <li>The right to access, update or to delete the information we have on you.</li>
+            <li>The right of rectification.</li>
+            <li>The right to object.</li>
+            <li>The right of restriction.</li>
+            <li>The right to data portability.</li>
+            <li>The right to withdraw consent.</li>
+        </ul>
+           </div>
+         
   <br>
       <h2>Website Visitors</h2>
           <p>
@@ -79,12 +85,15 @@
          <p>
            Generating Statistics
          </p>
-         <ul>
-             <li>Measuring Website traffic such as the number of visits to the Website.</li>
-             <li>Which Domains the visitors come from.</li>
-             <li>Which pages visitors view on the Website.</li>
-             <li>Which overall geographical areas the visitors are located.</li>
-         </ul>
+         <div class="content">
+          <ul class="is-lower-roman">
+            <li>Measuring Website traffic such as the number of visits to the Website.</li>
+            <li>Which Domains the visitors come from.</li>
+            <li>Which pages visitors view on the Website.</li>
+            <li>Which overall geographical areas the visitors are located.</li>
+        </ul>
+         </div>
+         
          <p>
            Deletion of Cookies
          </p>
