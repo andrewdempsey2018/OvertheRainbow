@@ -9,15 +9,15 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route("/test")
-def test():
-    return render_template('test.html')
 
+@app.route("/accessibility")
+def accessibility():
+    return render_template('accessibility.html')
 
 
 @app.route("/home")
 def home():
-    return render_template('home.html')
+    return render_template('home.html', page_title="Over the Rainbow")
 
 
 @app.route("/flags")
