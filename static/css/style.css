@@ -71,6 +71,16 @@ body {
 }
 
 /* Footer */
+
+footer {
+    background-color: var(--p1-light);
+    min-width: 100%;
+}
+
+.footer-m {
+    margin: 1.5rem auto 1rem;
+}
+
 .fa-github.member1 {
     color: var(--red);
 }
