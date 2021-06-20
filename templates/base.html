@@ -1,75 +1,103 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- External libraries/frameworks CSS links -->
-        <!-- CSS -->
-        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css"
-            integrity="sha512-byErQdWdTqREz6DLAA9pCnLbdoGGhXfU6gm1c8bkf7F51JVmUBlayGe2A31VpXWQP+eiJ3ilTAZHCR3vmMyybA=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-        <!-- Project main CSS stylesheet -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-        <title>LGBTQ+</title>
-    </head>
-    <body>
+<html lang="en">
 
-        <!-- Navbar -->
-        <nav class="navbar" id="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="{{ url_for('index') }}">
-                    <img src="{{ url_for('static', filename='images/Logo1-tinypng.png') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External libraries/frameworks CSS links -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css"
+        integrity="sha512-byErQdWdTqREz6DLAA9pCnLbdoGGhXfU6gm1c8bkf7F51JVmUBlayGe2A31VpXWQP+eiJ3ilTAZHCR3vmMyybA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Project main CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>LGBTQ+</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='images/Logo1-tinypng.png') }}">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a href="{{ url_for('home') }}" class="navbar-item">
+                    <strong>Home</strong>
                 </a>
-                
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
+                <a href="{{ url_for('support') }}" class="navbar-item">
+                    <strong>Support</strong>
+                </a>
+                <a href="{{ url_for('flags') }}" class="navbar-item">
+                    <strong>Flags</strong>
                 </a>
             </div>
-          
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-end">
-                    <a href="{{ url_for('home') }}" class="navbar-item">
-                        <strong>Home</strong>
-                    </a>
-                    <a href="{{ url_for('support') }}" class="navbar-item">
-                        <strong>Support</strong>
-                    </a>
-                    <a href="{{ url_for('flags') }}" class="navbar-item">
-                        <strong>Flags</strong>
-                    </a>
+
+            <div class="navbar-item">
+                <a href="#" class="button button-color">
+                    <strong class="button-text">Open Chat</strong>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- main block for child template injection -->
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container has-text-centered">
+            <div class="columns">
+                <div class="column">
+                    <a href="{{ url_for('accessibility') }}" class="policy_link" target="_blank">Accessibility</a>
+                </div>
+                <div class="column">
+                    <a href="https://github.com/lemocla" target="_blank"><i class="fab fa-github member1 fa-3x"></i></a>
+                </div>
+                <div class="column">
+                    <a href="https://github.com/Irishbecky91" target="_blank"><i class="fab fa-github member2 fa-3x"></i></a>
+                </div>
+                <div class="column">
+                    <a href="https://github.com/auxfuse" target="_blank"><i class="fab fa-github member3 fa-3x"></i></a>
+                </div>
+                <div class="column">
+                    <a href="https://github.com/andrewdempsey2018" target="_blank"><i class="fab fa-github member4 fa-3x"></i></a>
+                </div>
+                <div class="column">
+                    <a href="https://github.com/Maya-Claveau" target="_blank"><i class="fab fa-github member5 fa-3x"></i></a>
+                </div>
+                <div class="column">
+                    <a href="#" target="_blank"><i class="fab fa-github member6 fa-3x"></i></a>
                 </div>
                 
-                <div class="navbar-item">
-                    <a href="#" class="button button-color">
-                        <strong class="button-text">Open Chat</strong>
-                    </a>
+                <div class="column">
+                    <a href="#" class="policy_link" target="_blank">Privacy</a>
                 </div>
             </div>
-        </nav>
-        <!-- main block for child template injection -->
-        {% block content %}{% endblock %}
+        </div>
+        </div>
+    </footer>
 
-        <!-- Footer -->
-        
-        <!-- External libraries/frameworks JS links -->
+    <!-- External libraries/frameworks JS links -->
 
-        <!-- Project main JS file -->
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    </body>
+    <!-- Project main JS file -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
 </html>

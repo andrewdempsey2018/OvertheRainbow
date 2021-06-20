@@ -70,6 +70,56 @@ body {
     );
 }
 
+/* Footer */
+.fa-github.member1 {
+    color: var(--red);
+}
+
+.fa-github.member2 {
+    color: var(--orange);
+}
+
+.fa-github.member3 {
+    color: var(--yellow);
+}
+
+.fa-github.member4 {
+    color: var(--green);
+}
+
+.fa-github.member5 {
+    color: var(--blue);
+}
+
+.fa-github.member6 {
+    color: var(--purple);
+}
+
+.fa-github {
+    transition: all .2s ease-in-out; 
+}
+
+.fa-github:hover {
+    transform: scale(1.2);
+}
+
+.policy_link
+{
+    transition: all .2s ease-in-out; 
+    color:black;
+}
+
+.policy_link:visited
+{
+    color:black;
+}
+
+.policy_link:hover 
+{
+    transform: scale(1.5);
+    font-weight: bold;
+}
+
 /* Landing Page */
 
 .full-height {
@@ -282,11 +332,6 @@ body {
     overflow: hidden;
     max-height: 175px;
     object-fit: cover;
-}
-
-/* Accessibility Page */
-.container {
-    background-color: var(--p1-light);
 }
 
 /* 500 Page */
