@@ -7,6 +7,8 @@
     --green: #007f24;
     --blue: #004dff;
     --purple: #790589;
+    --lightblue: #9ad5f3;
+    --lightpink: #e9abb8;
     --p1-dark: #2d2d2d;
     --p1-light: #fefefe;
 }
@@ -19,6 +21,11 @@
     box-sizing: border-box;
 }
 
+html {
+    /* Overflow-y set to auto to counteract always visible scrollbar set via Bulma */
+    overflow-y: auto;
+}
+
 body {
     background-color: var(--p1-dark);
     color: var(--p1-light);
@@ -27,14 +34,40 @@ body {
     align-items: center;
 }
 
+    /* Navbar */
 .navbar {
-    height: 5em;
+    height: 6.5em;
     width: 100%;
 }
 
 .navbar-item>img {
-    width: 5em;
-    max-height: 5em;
+    max-height: 6em;
+    padding-bottom: 10px;
+}
+
+.navbar-end>.navbar-item:not(:last-child)::after {
+    content: '';
+    display: inline-block;
+    height: 2em;
+    width: 2px;
+    background-color: var(--p1-dark);
+    margin-left: 1.5rem;
+}
+
+.button-text::after {
+    content: '';
+    display: block;
+    height: 10px;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid var(--p1-dark);
+    background-image: linear-gradient(90deg,
+        var(--lightblue) 0, var(--lightblue) 20%,
+        var(--lightpink) 20%, var(--lightpink) 40%,
+        var(--p1-light) 40%, var(--p1-light) 60%,
+        var(--lightpink) 60%, var(--lightpink) 80%,
+        var(--lightblue) 80%, var(--lightblue) 100%
+    );
 }
 
 /* Landing Page */
@@ -77,14 +110,15 @@ body {
             var(--yellow), var(--yellow),
             var(--green), var(--green),
             var(--blue), var(--blue),
-            var(--purple), var(--purple));
+            var(--purple), var(--purple)
+            );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
     transition: all .6s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-#chevron-checkbox:checked~.chevron-checkbox-label>.fa-heart {
+#chevron-checkbox:checked ~ .chevron-checkbox-label>.fa-heart {
     transform: scale(1000);
     opacity: 0;
 }
@@ -142,7 +176,7 @@ body {
 .card-container {
     width: 100%;
     height: 100%;
-    transition: transform 1.2s;
+    transition: transform .6s;
     transform-style: preserve-3d;
     position: relative;
 }
@@ -150,7 +184,7 @@ body {
 .card-container:hover,
 .card-container:active {
     transform: scale(.97);
-    transition: transform 2s;
+    transition: transform .6s;
 }
 
 .card-container.is-flipped {
@@ -185,6 +219,11 @@ figure {
 
 .image {
     display: inherit;
+}
+
+/* Accessibility Page */
+.access-logo {
+    height: 12em;
 }
 
 /* Media Queries */
