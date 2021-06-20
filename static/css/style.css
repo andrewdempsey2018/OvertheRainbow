@@ -232,7 +232,17 @@ body {
 /* privacy policy page*/
 .pp-image {
     height: auto;
+    width: 30%;
+}
+
+#fingerprint {
+    height: 30%;
     width: 10%;
+}
+
+#playdough {
+    height: 50%;
+    width: 30%;
 }
 
 /* 404 page*/
