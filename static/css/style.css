@@ -72,6 +72,22 @@ body {
     -webkit-text-stroke: 1px var(--p1-dark);
 }
 
+.fa-flag {
+    background-image: linear-gradient(90deg,
+        var(--p1-dark), var(--p1-dark),
+        var(--p1-dark), var(--p1-dark),
+        var(--red), var(--red),
+        var(--orange), var(--orange),
+        var(--yellow), var(--yellow),
+        var(--green), var(--green),
+        var(--blue), var(--blue),
+        var(--purple), var(--purple)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scaleX(-1);
+}
+
 .button-text::after {
     content: '';
     display: block;
@@ -86,6 +102,12 @@ body {
         var(--lightpink) 60%, var(--lightpink) 80%,
         var(--lightblue) 80%, var(--lightblue) 100%
     );
+}
+
+/* Utility classes */
+
+.pad-left-sm {
+    padding-left: 10px;
 }
 
 /* Landing Page */

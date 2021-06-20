@@ -39,14 +39,24 @@
           
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-end">
+                    <!-- Logical statement used to add elements & classes adding to visual appeal of navbar -->
                     <a href="{{ url_for('home') }}" class="navbar-item">
-                        <strong>Home</strong>
+                        {% if request.path == '/home' %}<i class="fas fa-flag"></i>{% endif %}
+                        <strong {% if request.path == '/home' %}class="pad-left-sm"{% endif %}>
+                            Home
+                        </strong>
                     </a>
                     <a href="{{ url_for('support') }}" class="navbar-item">
-                        <strong>Support</strong>
+                        {% if request.path == '/support' %}<i class="fas fa-flag"></i>{% endif %}
+                        <strong {% if request.path == '/support' %}class="pad-left-sm"{% endif %}>
+                            Support
+                        </strong>
                     </a>
                     <a href="{{ url_for('flags') }}" class="navbar-item">
-                        <strong>Flags</strong>
+                        {% if request.path == '/flags' %}<i class="fas fa-flag"></i>{% endif %}
+                        <strong {% if request.path == '/flags' %}class="pad-left-sm"{% endif %}>
+                            Flags
+                        </strong>
                     </a>
                 </div>
                 
@@ -57,6 +67,7 @@
                 </div>
             </div>
         </nav>
+        
         <!-- main block for child template injection -->
         {% block content %}{% endblock %}
 
