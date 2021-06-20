@@ -90,7 +90,11 @@ body {
     opacity: 0;
 }
 
-/* Flags page */
+/*-------------- Flags page ----------------*/
+
+.container-flag-intro{
+    margin: 0 auto;
+}
 
 .container{
     width: 100%;
@@ -140,31 +144,25 @@ body {
     transform: rotateY(180deg);
 }
 
-figure{
+.figure-flag{
     max-height: 200px;
     max-width: 350px;
     margin: 0 auto;
 }
 
-.image{
+.image-flag{
     display: inherit;
 }
 
-/* Support page */
+/*-------------------- Support page ---------------------------*/
 
-.test1{
-    border: 1px solid red;
-}
-.test{
-    border: 1px solid white;
-}
-
-.figure-default{
-    display: block;
-    max-height: 375px;
-    max-width: 100%;
-    margin: 0 auto;
-    overflow-y: hidden;
+.about-bg-img{
+    background-image: url("/static/images/support_about.jpg");
+    background-color: #cccccc; 
+    min-height: 350px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
 }
 
 .btn-support{
@@ -179,7 +177,9 @@ figure{
 
 /* flickity small rounded square buttons*/
 /*https://flickity.metafizzy.co/style.html*/
-
+.p-advocate{
+    margin-bottom: 25px;
+}
 .carousel-cell {
     width: 98%;
 }
@@ -197,17 +197,19 @@ figure{
 
 /* position outside */
 .flickity-prev-next-button.previous {
-    left: -15px;
-    top: 45%;
+    left: 0px;
+    top: -25px;
 }
 
 .flickity-prev-next-button.next {
-    right: -15px;
-    top: 45%;
+    right: 10px;
+    top: -25px;
 }
 
 .img-advocates{
     overflow: hidden;
+    max-height: 175px;
+    object-fit: cover;
 }
 
 /* Media Queries */
@@ -223,8 +225,29 @@ figure{
         height: 300px;
     }
     /*-----------------------carousel-----------------------------*/
+    .p-advocate{
+        margin-bottom: 0px;
+    }
+
+    .carousel{
+        padding-left: 25px;
+    }
     .carousel-cell {
-        width: 47.45%;
+        width: 47.25%;
+        height: auto;
+    }
+    .flickity-prev-next-button.previous {
+        left: -15px;
+        top: 45%;
+    }
+
+    .flickity-prev-next-button.next {
+        right: -15px;
+        top: 45%;
+    }Ï
+
+    .img-advocates {
+        height: 225px;
     }
 }
 
@@ -243,18 +266,21 @@ figure{
     }
     
     /*-----------------------carousel-----------------------------*/
-
+    .carousel{
+        padding-left: 0px;
+    }
     .carousel-cell {
         width: 31.35%;
     }
-
+    
     .flickity-prev-next-button.previous {
-        left: -5px;
+        left: -45px;
     }  
 
     .flickity-prev-next-button.next {
-        right: -5px;
+        right: -45px;
     }
+    
 }
 
 @media (min-width: 1216px) {
