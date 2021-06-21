@@ -6,7 +6,6 @@
 
 - [What does it do and what does it need to fulfill?](#what-does-it-do-and-what-does-it-need-to-fulfill)
 - [Wireframes](#wireframes)
-- [Features](#features)
 - [Dev-notes](#dev-notes)
 - [Tech Stack](#tech-stack)
 - [Credits](#credits)
