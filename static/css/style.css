@@ -121,29 +121,39 @@ footer {
 
 .fa-github.member1 {
     color: var(--red);
+    -webkit-text-stroke: 1px var(--p1-dark);
 }
 
 .fa-github.member2 {
     color: var(--orange);
+    -webkit-text-stroke: 1px var(--p1-dark);
 }
 
 .fa-github.member3 {
-    color: var(--purple);
+    color: var(--yellow);
+    -webkit-text-stroke: 1px var(--p1-dark);
 }
 
 .fa-github.member4 {
     color: var(--green);
+    -webkit-text-stroke: 1px var(--p1-dark);
 }
 
 .fa-github.member5 {
     color: var(--blue);
+    -webkit-text-stroke: 1px var(--p1-dark);
 }
 
-.fa-github {
+.fa-linkedin.member6 {
+    color: var(--purple);
+    -webkit-text-stroke: 1px var(--p1-dark);
+}
+
+.fa-github, .fa-linkedin {
     transition: all .2s ease-in-out; 
 }
 
-.fa-github:hover {
+.fa-github:hover, .fa-linkedin:hover {
     transform: scale(1.2);
 }
 
