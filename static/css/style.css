@@ -257,6 +257,13 @@ footer {
 }
 /* Home page */
 
+.card-mission {
+    min-height: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .card-mission-1 {
     background-color: var(--red);
     color: var(--p1-light);
@@ -521,7 +528,7 @@ footer {
     .navbar-burger {
         display: none;
     }
-
+ 
     /* Landing Page */
     #landing-title {
         letter-spacing: 1.2ch;
