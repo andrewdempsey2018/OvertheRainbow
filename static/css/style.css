@@ -69,7 +69,6 @@ body {
         var(--lightblue) 80%, var(--lightblue) 100%
     );
 }
-
 /* Footer */
 
 footer {
@@ -126,6 +125,10 @@ footer {
 {
     transform: scale(1.5);
     font-weight: bold;
+}
+
+.title {
+    color: var(--p1-light);
 }
 
 /* Landing Page */
@@ -285,6 +288,38 @@ footer {
 .image-flag{
     display: inherit;
 }
+
+/* privacy policy page*/
+.pp-image {
+    height: auto;
+    width: 30%;
+}
+
+#fingerprint {
+    height: 30%;
+    width: 10%;
+    float: right;
+}
+
+#playdough {
+    height: 50%;
+    width: 50%;
+}
+
+.w100 {
+    width: 100%;
+}
+
+/* 404 page*/
+.pokemon-image {
+    height: auto;
+    width: 50%;
+}
+
+.right {
+    float: right;
+}
+
 
 /*-------------------- Support page ---------------------------*/
 
