@@ -389,6 +389,7 @@ footer {
             var(--blue), var(--blue),
             var(--purple), var(--purple)
             );
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
@@ -568,11 +569,6 @@ footer {
     height: 30%;
     width: 10%;
     float: right;
-}
-
-#playdough {
-    height: 50%;
-    width: 50%;
 }
 
 .w100 {
