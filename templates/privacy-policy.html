@@ -2,7 +2,7 @@
 
 {% block content %}
     <div class="container is-fluid content">
-        <h1 class="has-text-centered title has-text-white">Privacy Policy</h1>
+        <h1 class="title has-text-white mt-5">Privacy Policy</h1>
         <img class="image pp-image w100" src="{{ url_for('static', filename='images/paint.jpg') }}" alt="rainbow paint">
         <small class="has-text-right">Effective 21 June 2021</small>
         <h1 class="has-text-white">Summary</h1>
@@ -92,11 +92,10 @@
         Although most changes are likely to be minor, Over the Rainbow may change its Privacy Policy from time to time, and in Over the Rainbow sole discretion. Over the Rainbow encourages visitors to frequently check this page for any changes to its Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.
         </p>
         
-        <img id="playdough" src="{{ url_for('static', filename='images/playdough.jpg') }}" alt="lgbtq playdough">
-    
         <h2 class="has-text-white">Consent</h2>
         <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
-        <img src="{{ url_for('static', filename='images/Logo1-tinypng.png') }}" alt="zebra with rainbow color">
+
+        <img class="image pp-image w100 mb-3" src="{{ url_for('static', filename='images/playdough.jpg') }}" alt="lgbtq playdough">
     
     </div>
 {% endblock %}
