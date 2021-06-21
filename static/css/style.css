@@ -10,6 +10,7 @@
     --lightblue: #9ad5f3;
     --lightpink: #e9abb8;
     --p1-dark: #2d2d2d;
+    --p2-dark: #1f1e1e;
     --p1-light: #fefefe;
 }
 
@@ -147,11 +148,11 @@ footer {
 
 .policy_link {
     transition: all .2s ease-in-out; 
-    color:black;
+    color: var(--p2-dark);
 }
 
 .policy_link:visited {
-    color:black;
+    color: var(--p2-dark);
 }
 
 .policy_link:hover {
@@ -437,6 +438,7 @@ footer {
         width: 45%;
         height: 300px;
     }
+
     /* carousel */
     .p-advocate{
         margin-bottom: 0px;
@@ -445,10 +447,12 @@ footer {
     .carousel{
         padding-left: 25px;
     }
+
     .carousel-cell {
         width: 47%;
         height: auto;
     }
+    
     .flickity-prev-next-button.previous {
         left: -15px;
         top: 45%;
