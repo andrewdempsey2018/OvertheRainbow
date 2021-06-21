@@ -64,7 +64,9 @@
         </nav>
 
         <!-- main block for child template injection -->
-        {% block content %}{% endblock %}
+        <div class="content-container">
+            {% block content %}{% endblock %}
+        </div>
 
         <!-- Footer -->
         <footer id="footer">
@@ -107,10 +109,10 @@
                     <div class="column">
                         <!-- Link here needs to be activated with privacy route -->
                         <!-- also... Steve Rogers shoulda learned Git -->
-                        <a href="{{ url_for('privacy') }}" class="policy_link" target="_blank">Privacy</a>
+                        <a href="{{ url_for('privacy') }}" class="policy_link">Privacy</a>
                     </div>
                     <div class="column">
-                        <a href="{{ url_for('accessibility') }}" class="policy_link" target="_blank">Accessibility</a>
+                        <a href="{{ url_for('accessibility') }}" class="policy_link">Accessibility</a>
                     </div>
                 </div>
             </div>

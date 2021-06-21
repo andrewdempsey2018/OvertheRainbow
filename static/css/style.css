@@ -30,10 +30,15 @@ html {
 body {
     background-color: var(--p1-dark);
     color: var(--p1-light);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+}
+
+    /* Ensure footer is set to bottom of screen irrespective of content above */
+.content-container {
+    flex: 1;
 }
 
     /* Navbar */
@@ -444,7 +449,8 @@ footer {
 }
 
 /* 500 Page */
-.error-500 {
+
+.error-500>img {
     width: 40%;
 }
 
