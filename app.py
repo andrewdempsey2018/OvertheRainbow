@@ -10,19 +10,19 @@ def index():
     return render_template('index.html')
 
 
-@app.route("/test")
-def test():
-    return render_template('test.html')
-
-
-@app.route("/support")
-def support():
-    return render_template('support.html')
+@app.route("/accessibility")
+def accessibility():
+    return render_template('accessibility.html')
 
 
 @app.route("/home")
 def home():
-    return render_template('home.html')
+    return render_template('home.html', page_title="Over the Rainbow")
+
+
+@app.route("/error500")
+def error500():
+    return render_template('error-500.html')
 
 
 @app.route("/flags")
@@ -31,6 +31,14 @@ def flags():
     with open("data/flags.json", "r", encoding="utf8") as json_data:
         data = json.load(json_data)
     return render_template("flags.html", page_title="Meet the flags", flags=data)
+
+
+@app.route("/support")
+def support():
+    data = []
+    with open("data/advocates.json", "r", encoding="utf8") as json_data:
+        data = json.load(json_data)
+    return render_template("support.html", page_title="Supporting LGBTQ+ Community", advocates=data)
 
 
 if __name__ == "__main__":

@@ -7,6 +7,7 @@
 - [What does it do and what does it need to fulfill?](#what-does-it-do-and-what-does-it-need-to-fulfill)
 - [Wireframes](#wireframes)
 - [Features](#features)
+- [Dev-notes](#dev-notes)
 - [Tech Stack](#tech-stack)
 - [Credits](#credits)
 
@@ -29,6 +30,8 @@ The team consists of the following developers, for which, without them this proj
 ### Features:
 
 ***
+
+## Dev-notes:
 
 ## Tech Stack:
 ### Languages, Frameworks, Editors & Version Control used:
