@@ -33,12 +33,22 @@ def flags():
     return render_template("flags.html", page_title="Meet the flags", flags=data)
 
 
+@app.route("/privacy")
+def privacy():
+    return render_template('privacy-policy.html')
+
+
 @app.route("/support")
 def support():
     data = []
     with open("data/advocates.json", "r", encoding="utf8") as json_data:
         data = json.load(json_data)
     return render_template("support.html", page_title="Supporting LGBTQ+ Community", advocates=data)
+
+
+@app.route("/error")
+def error():
+    return render_template("404.html")
 
 
 if __name__ == "__main__":

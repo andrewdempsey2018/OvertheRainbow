@@ -110,6 +110,12 @@ body {
     padding-left: 10px;
 }
 
+/* Bulma Overrides */
+
+.title {
+    color: var(--p1-light);
+}
+
 /* Landing Page */
 
 .full-height {
@@ -266,6 +272,38 @@ body {
     display: inherit;
 }
 
+/* privacy policy page*/
+.pp-image {
+    height: auto;
+    width: 30%;
+}
+
+#fingerprint {
+    height: 30%;
+    width: 10%;
+    float: right;
+}
+
+#playdough {
+    height: 50%;
+    width: 50%;
+}
+
+.w100 {
+    width: 100%;
+}
+
+/* 404 page*/
+.pokemon-image {
+    height: auto;
+    width: 50%;
+}
+
+.right {
+    float: right;
+}
+
+
 /*-------------------- Support page ---------------------------*/
 
 .about-bg-img{
@@ -292,6 +330,7 @@ body {
 .p-advocate{
     margin-bottom: 25px;
 }
+
 .carousel-cell {
     width: 98%;
 }
@@ -324,11 +363,6 @@ body {
     object-fit: cover;
 }
 
-/* Accessibility Page */
-.container {
-    background-color: var(--p1-light);
-}
-
 /* 500 Page */
 .error-500 {
     width: 40%;
@@ -346,7 +380,7 @@ body {
         width: 45%;
         height: 300px;
     }
-    /*-----------------------carousel-----------------------------*/
+    /* carousel */
     .p-advocate{
         margin-bottom: 0px;
     }
@@ -402,10 +436,11 @@ body {
         margin-left: 15px;
     }
     
-    /*-----------------------carousel-----------------------------*/
+    /* carousel */
     .carousel{
         padding-left: 0px;
     }
+    
     .carousel-cell {
         width: 31.5%;
     }
