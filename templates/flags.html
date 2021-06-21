@@ -3,9 +3,9 @@
 {% block content %}
 <div class="mt-6 container content container-flag-intro">
 <div class="content">
-    <h1 class="px-5 title is-1 has-text-white"> {{ page_title }}</h1>
+    <h1 class="px-5 title is-1 has-text-white">{{ page_title }}</h1>
     <p class="px-5 is-size-5">
-        Somewhere over the rainbow...there is a great variety of lags, representing the multiple facets and diversity
+        Somewhere over the rainbow...there is a great variety of flags, representing the multiple facets and diversity
         within the LGBTQ community. </p>
     <p class="px-5 is-size-5">
         Far more than pieces of fabric, these LGBTQ flags tell the story of the individuals
@@ -15,25 +15,23 @@
 </div>
 </div>
 
-<div class="container is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-space-evenly">
-    <!--Content-->
-    {% for flag in flags %}
-    <div class="flex-box-flag ">
-        <div class="card-container">
-            <div class="box card-front">
-                <figure class="figure-flag image image-flag is-5by3-desktop is-2by1-tablet is-5by3-mobile">
-                    <img src="{{flag.Image_url}}" alt="{{flag.flag_name}}">
-                </figure>
-                <h2
-                    class="mt-4 title is-size-4-desktop is-size-5-tablet is-size-4-mobile has-text-black has-text-centered">
-                    {{flag.flag_name}}</h2>
-            </div>
+    <div class="container is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-space-evenly">
+        <!--Content-->
+        {% for flag in flags %}
+            <div class="flex-box-flag ">
+                <div class="card-container">
+                    <div class="box card-front">
+                        <figure class="figure-flag image image-flag is-5by3-desktop is-2by1-tablet is-5by3-mobile">
+                            <img src="{{flag.Image_url}}" alt="{{flag.flag_name}}">
+                        </figure>
+                        <h2 class="mt-4 title is-size-4-desktop is-size-5-tablet is-size-4-mobile has-text-black has-text-centered">{{flag.flag_name}}</h2>
+                    </div>
 
-                <div class="box card-back">
-                    {{flag.flag_description}}
+                    <div class="box card-back">
+                        {{flag.flag_description}}
+                    </div>
                 </div>
             </div>
-        </div>
         {% endfor %}
         <!--end content-->
     </div>
