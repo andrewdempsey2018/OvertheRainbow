@@ -33,6 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
 }
 
     /* Navbar */
@@ -166,10 +167,19 @@ footer {
     padding-left: 10px;
 }
 
+.text-p1-light {
+    color: var(--p1-light);
+}
+
 /* Bulma Overrides */
 
 .title {
     color: var(--p1-light);
+}
+
+.tile.is-ancestor.tile-ancestor-404 {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* Landing Page */
@@ -351,17 +361,6 @@ footer {
     width: 100%;
 }
 
-/* 404 page*/
-.pokemon-image {
-    height: auto;
-    width: 50%;
-}
-
-.right {
-    float: right;
-}
-
-
 /*-------------------- Support page ---------------------------*/
 
 .about-bg-img{
@@ -421,6 +420,19 @@ footer {
     object-fit: cover;
 }
 
+/* 404 Page */
+
+.tile-404 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon-image {
+    height: auto;
+    width: 50%;
+}
+
 /* 500 Page */
 .error-500 {
     width: 40%;
@@ -452,7 +464,7 @@ footer {
         width: 47%;
         height: auto;
     }
-    
+
     .flickity-prev-next-button.previous {
         left: -15px;
         top: 45%;
