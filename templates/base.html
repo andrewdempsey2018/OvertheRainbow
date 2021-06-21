@@ -26,35 +26,43 @@
                 <a class="navbar-item" href="{{ url_for('index') }}">
                     <img src="{{ url_for('static', filename='images/Logo1-tinypng.png') }}">
                 </a>
-
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
+                
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
                 </a>
             </div>
-
+          
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-end">
+                    <!-- Logical statement used to add elements & classes adding to visual appeal of navbar -->
                     <a href="{{ url_for('home') }}" class="navbar-item">
-                        <strong>Home</strong>
+                        {% if request.path == '/home' %}<i class="fas fa-flag"></i>{% endif %}
+                        <strong {% if request.path == '/home' %}class="pad-left-sm"{% endif %}>
+                            Home
+                        </strong>
                     </a>
                     <a href="{{ url_for('support') }}" class="navbar-item">
-                        <strong>Support</strong>
+                        {% if request.path == '/support' %}<i class="fas fa-flag"></i>{% endif %}
+                        <strong {% if request.path == '/support' %}class="pad-left-sm"{% endif %}>
+                            Support
+                        </strong>
                     </a>
                     <a href="{{ url_for('flags') }}" class="navbar-item">
-                        <strong>Flags</strong>
+                        {% if request.path == '/flags' %}<i class="fas fa-flag"></i>{% endif %}
+                        <strong {% if request.path == '/flags' %}class="pad-left-sm"{% endif %}>
+                            Flags
+                        </strong>
                     </a>
                 </div>
-
+                
                 <div class="navbar-item">
-                    <a href="#" class="button button-color">
-                        <strong class="button-text">Open Chat</strong>
+                    <a href="https://open.spotify.com/playlist/3sxSipiy7nmSMr19s7XwJP?si=578b2904af7d4afd" target="_blank" class="button button-color">
+                        <strong class="button-text">🎵 Inspire 🎵</strong>
                     </a>
                 </div>
             </div>
         </nav>
+
         <!-- main block for child template injection -->
         {% block content %}{% endblock %}
 
