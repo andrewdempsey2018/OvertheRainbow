@@ -75,6 +75,8 @@ body {
 footer {
     background-color: var(--p1-light);
     min-width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .footer-m {
@@ -90,7 +92,7 @@ footer {
 }
 
 .fa-github.member3 {
-    color: var(--yellow);
+    color: var(--purple);
 }
 
 .fa-github.member4 {
@@ -99,10 +101,6 @@ footer {
 
 .fa-github.member5 {
     color: var(--blue);
-}
-
-.fa-github.member6 {
-    color: var(--purple);
 }
 
 .fa-github {
