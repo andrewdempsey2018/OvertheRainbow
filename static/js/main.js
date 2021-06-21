@@ -2,6 +2,7 @@
 let checkbox = document.getElementById("chevron-checkbox");
 let title = document.getElementById("landing-title");
 let navbar = document.getElementById("navbar");
+let footer = document.getElementById("footer");
 
 if(checkbox){
     checkbox.addEventListener("click", () => {
@@ -20,6 +21,7 @@ if(checkbox){
 // Set display of navbar to none for root path only (aka index in app.py)
 if(window.location.pathname == '/'){
     navbar.style.display = "none";
+    footer.style.display = "none";
 }
 
 // Navigation Bar Toggle
