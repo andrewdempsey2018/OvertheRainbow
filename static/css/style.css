@@ -250,30 +250,41 @@ footer {
     opacity: 0;
 }
 
-/*-------------- Flags page ----------------*/
+/* Flags page */
 
 .container-flag-intro{
     margin: 0 auto;
 }
 /* Home page */
+
 .card-mission-1 {
     background-color: var(--red);
-    color: white;
+    color: var(--p1-light);
 }
 
 .card-mission-2 {
     background-color: var(--orange);
-    color: black;
+    color: var(--p1-dark);
 }
 
 .card-mission-3 {
     background-color: var(--yellow);
-    color: black;
+    color: var(--p1-dark);
 }
 
 .card-mission-4 {
     background-color: var(--green);
-    color: white;
+    color: var(--p1-light);
+}
+
+.card-mission-5 {
+    background-color: var(--blue);
+    color: var(--p1-light);
+}
+
+.card-mission-6 {
+    background-color: var(--purple);
+    color: var(--p1-light);
 }
 
 .info_link
