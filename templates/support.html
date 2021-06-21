@@ -1,66 +1,66 @@
 {% extends 'base.html' %}
+
 {% block content %}
-<div class="container mt-6 px-3">
-    <div class="mt-3 tile is-ancestor is-vertical block content">
-    <h1 class="px-3 title is-1 has-text-white"> {{ page_title }}</h1>
-        <div class="tile is-parent is-12">
-            <div class="tile is-child content about-bg-img">
-            </div>
-            <div class="tile is-parent is-vertical content-container">
-                <div class="tile is-child content">
-                    <p class="is-size-5">
-                        Our aim is to empower LGBTQ+ community by providing a platform to connect and share and to champion equality so that 
-                        all members of the LGBTQ+ community can be free to themselves and live their life to the full. 
-                        We also provide informational supports to educate the public at large about the rich history and diversity of the LGBTQ+ 
-                        community to promote inclusive and accepting attitudes. 
-                    </p>
-                    <p class="is-size-5">
-                        It’s LGBTQ Pride Month — a time to celebrate love, but also to champion equality and LGBTQ rights.
-                    </p>
+    <div class="container mt-6 px-3">
+        <div class="mt-3 tile is-ancestor is-vertical block content">
+        <h1 class="px-3 title is-1 has-text-white"> {{ page_title }}</h1>
+            <div class="tile is-parent is-12">
+                <div class="tile is-child content about-bg-img">
                 </div>
-                <div class="tile is-child">
-                    <button class="button btn-support is-fullwidth is-uppercase has-text-weight-bold is-size-6">
-                        Learn all about the Pride's Flags
-                    </button>
-                    <button class="mt-5 button btn-support is-fullwidth is-uppercase has-text-weight-bold is-size-6">
-                        Want to chat in our community?
-                    </button>
+                <div class="tile is-parent is-vertical content-container">
+                    <div class="tile is-child content">
+                        <p class="is-size-5">
+                            Our aim is to empower LGBTQ+ community by providing a platform to connect and share and to champion equality so that 
+                            all members of the LGBTQ+ community can be free to themselves and live their life to the full. 
+                            We also provide informational supports to educate the public at large about the rich history and diversity of the LGBTQ+ 
+                            community to promote inclusive and accepting attitudes. 
+                        </p>
+                        <p class="is-size-5">
+                            It’s LGBTQ Pride Month — a time to celebrate love, but also to champion equality and LGBTQ rights.
+                        </p>
+                    </div>
+                    <div class="tile is-child">
+                        <button class="button btn-support is-fullwidth is-uppercase has-text-weight-bold is-size-6">
+                            Learn all about the Pride's Flags
+                        </button>
+                        <button class="mt-5 button btn-support is-fullwidth is-uppercase has-text-weight-bold is-size-6">
+                            Want to chat in our community?
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="container mt-6 px-3">
-    <div class="tile is-ancestor is-vertical block is-12">
-        <div class="tile is-parent block">
-            <div class="content">
-                <h2 class="has-text-white is-size-1">LGBTQ+ Advocates</h2>
-                <p class="p-advocate mt-4 has-text-white is-size-5">
-                    Meet and celebrate LGBTQ+ advocates and activits who - throughout history and today - are inspiring champions for change,
-                     making a difference to our community and beyond. 
-                </p>
-            </div>
-        </div>
-
-        <div class="tile is-parent block">
-            <!--   carousel https://flickity.metafizzy.co/options.html#setup and https://codepen.io/desandro/pen/zxRYMP-->
-            <div class="carousel tile is-child"
-                data-flickity='{"wrapAround": true, "imagesLoaded": true, "cellAlign": "left", "pageDots": false}'>
-                {% for advocate in advocates %}
-                <!--is-initial-select-->
-                <div class="mx-3 box carousel-cell ">
-                    <figure class="figure-advocate image img-advocates">
-                        <img src="{{ advocate.image_url }}">
-                    </figure>
-                    <h3 class="mt-2 is-size-4 has-text-weight-bold">{{ advocate.advocate_name }}</h3>
-                    <p>{{ advocate.advocate_description}}</p>
+    <div class="container mt-6 px-3">
+        <div class="tile is-ancestor is-vertical block is-12">
+            <div class="tile is-parent block">
+                <div class="content">
+                    <h2 class="has-text-white is-size-1">LGBTQ+ Advocates</h2>
+                    <p class="p-advocate mt-4 has-text-white is-size-5">
+                        Meet and celebrate LGBTQ+ advocates and activits who - throughout history and today - are inspiring champions for change,
+                        making a difference to our community and beyond. 
+                    </p>
                 </div>
-                {% endfor %}
+            </div>
 
+            <div class="tile is-parent block">
+                <!--   carousel https://flickity.metafizzy.co/options.html#setup and https://codepen.io/desandro/pen/zxRYMP-->
+                <div class="carousel tile is-child"
+                    data-flickity='{"wrapAround": true, "imagesLoaded": true, "cellAlign": "left", "pageDots": false}'>
+                    {% for advocate in advocates %}
+                    <!--is-initial-select-->
+                    <div class="mx-3 box carousel-cell ">
+                        <figure class="figure-advocate image img-advocates">
+                            <img src="{{ advocate.image_url }}">
+                        </figure>
+                        <h3 class="mt-2 is-size-4 has-text-weight-bold">{{ advocate.advocate_name }}</h3>
+                        <p>{{ advocate.advocate_description}}</p>
+                    </div>
+                    {% endfor %}
+
+                </div>
             </div>
         </div>
     </div>
-</div>
-
 {% endblock %}

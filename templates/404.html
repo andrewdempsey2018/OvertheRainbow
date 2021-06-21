@@ -1,16 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container is-fluid content">
-    <h2 class="has-text-centered title has-text-white">Zamazenta come back, Rayquaza I choose you</h2>
-
-<h2 class="is-size-3 has-text-white has-text-centered">Now use Dragon Tail.</h2>
-
-<p class="is-size-1">Wait, you are not supposed to be here, this is pokemon gym battle, please go back and continue your thing.</p>
-</div>
-<img class="pokemon-image" src="{{ url_for('static', filename='images/rayquaza.png') }}" alt="rayquaza pokemon">
-<img class="pokemon-image right" src="{{ url_for('static', filename='images/megabeedrill.png') }}" alt="megabeedrill pokemon">
-<img class="pokemon-image" src="{{ url_for('static', filename='images/zamazenta.png') }}" alt="Zamazenta pokemon">
-<img class="pokemon-image right" src="{{ url_for('static', filename='images/zacian.png') }}" alt="zacian pokemon">
-
+    <div class="mt-6">
+        <h1 class="has-text-centered title is-1 text-p1-light">404 - Page not found!</h1>
+        <p class="has-text-centered text-p1-light">Zamazenta come back, Rayquaza I choose you</p>
+        <p class="text-p1-light has-text-centered">Now use Dragon Tail.</p>
+        <p class="has-text-centered">Wait, you are not supposed to be here, this is a pokemon gym battle, please go back and continue your thing.</p>
+    </div>
+    
+    <div class="tile is-ancestor tile-ancestor-404 mt-6">
+        <div class="tile tile-404">
+            <img class="pokemon-image" src="{{ url_for('static', filename='images/rayquaza.png') }}" alt="rayquaza pokemon">
+        </div>
+        <div class="tile tile-404">
+            <img class="pokemon-image" src="{{ url_for('static', filename='images/megabeedrill.png') }}" alt="megabeedrill pokemon">
+        </div>
+        <div class="tile tile-404">
+            <img class="pokemon-image" src="{{ url_for('static', filename='images/zamazenta.png') }}" alt="Zamazenta pokemon">
+        </div>
+        <div class="tile tile-404">
+            <img class="pokemon-image" src="{{ url_for('static', filename='images/zacian.png') }}" alt="zacian pokemon">
+        </div>
+    </div>
 {% endblock %}
